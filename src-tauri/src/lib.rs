@@ -1,4 +1,5 @@
 use std::sync::Mutex;
+use tauri::Manager;
 
 struct SidecarChild(Mutex<Option<tauri_plugin_shell::process::CommandChild>>);
 

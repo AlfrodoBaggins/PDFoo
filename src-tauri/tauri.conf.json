@@ -2,11 +2,11 @@
   "$schema": "https://raw.githubusercontent.com/nicedoc/tauri/main/.cargo/src/tauri-utils/schema.json",
   "productName": "PDFoo",
   "version": "0.1.0",
-  "identifier": "com.pdfoo.app",
+  "identifier": "com.pdfoo.desktop",
   "build": {
-    "beforeDevCommand": "concurrently -n vite,py \"vite\" \"venv/bin/uvicorn app.main:app --reload --port 8456\"",
+    "beforeDevCommand": "concurrently -n vite,py \"npm run dev\" \"venv/bin/uvicorn app.main:app --reload --port 8456\"",
     "devUrl": "http://localhost:1420",
-    "beforeBuildCommand": "vite build",
+    "beforeBuildCommand": "npm run build",
     "frontendDist": "../dist"
   },
   "app": {
